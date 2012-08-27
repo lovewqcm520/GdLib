@@ -1,7 +1,6 @@
 package com.gdlib.util
 {
 	import flash.display.DisplayObject;
-	import flash.display.DisplayObjectContainer;
 	import flash.geom.Matrix;
 
 	/**
@@ -53,44 +52,6 @@ package com.gdlib.util
 			m.c = Math.tan(skewDegree*_DEG2RAD);
 			target.transform.matrix = m;
 		}		
-		
-		/**
-		 * Add a filling fully in a skewed container.
-		 * @param filling		the filling, like a image.
-		 * @param container		the container that alreay been skewed.
-		 */
-		public static function addChildToSkewedContainer(filling:DisplayObject, container:DisplayObjectContainer):void
-		{
-			if(!filling || !container)
-				return;
-			
-			var oldWidth:Number = container.width;
-			var oldHeight:Number = container.height;
-			
-			container.addChild(filling);
-			filling.width = oldWidth;
-			filling.height = oldHeight;
-			
-			while(container.width > oldWidth)
-			{
-				filling.width--;
-			}
-			
-			while(container.width < oldWidth)
-			{
-				filling.width++;
-			}
-			
-			while(container.height > oldHeight)
-			{
-				filling.height--;
-			}
-			
-			while(container.height < oldHeight)
-			{
-				filling.height++;
-			}
-		}
 		
 	}
 }

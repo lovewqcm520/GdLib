@@ -29,7 +29,7 @@ package com.gdlib.test
 			init();
 		}
 		
-		private function init():void
+		protected function init():void
 		{
 			stage.align = StageAlign.TOP_LEFT;
 			stage.scaleMode = StageScaleMode.NO_SCALE;

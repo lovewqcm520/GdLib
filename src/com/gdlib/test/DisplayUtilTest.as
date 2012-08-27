@@ -2,7 +2,6 @@ package com.gdlib.test
 {
 	import com.gdlib.util.SkewUtil;
 	
-	import flash.display.Bitmap;
 	import flash.display.Sprite;
 
 	public class DisplayUtilTest extends BaseTest
@@ -37,9 +36,6 @@ package com.gdlib.test
 			sp4.y = 300;	
 			sp4.x = 600;			
 			addChild(sp4);
-			
-			var image:Bitmap = new TestImage() as Bitmap;
-			SkewUtil.addChildToSkewedContainer(image, sp4);
 		}
 		
 		private function createTestRectBox():Sprite

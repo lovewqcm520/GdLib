@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<actionScriptProperties analytics="false" mainApplicationPath="com/gdlib/test/DisplayUtilTest.as" projectUUID="84ed1bd1-df40-4c79-9978-2b8a34c9a026" version="10">
+<actionScriptProperties analytics="false" mainApplicationPath="com/gdlib/test/BitmapProcessTest.as" projectUUID="84ed1bd1-df40-4c79-9978-2b8a34c9a026" version="10">
   <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin-debug" removeUnusedRSL="true" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
     <compilerSourcePath/>
     <libraryPath defaultLinkType="0">
@@ -32,6 +32,8 @@
     <sourceAttachmentPath/>
   </compiler>
   <applications>
+    <application path="com/gdlib/test/BitmapProcessTest.as"/>
+    <application path="com/gdlib/test/TestAddedToStageEvent.as"/>
     <application path="com/gdlib/test/DisplayUtilTest.as"/>
     <application path="GdLib.as"/>
   </applications>
