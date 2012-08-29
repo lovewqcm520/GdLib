@@ -60,10 +60,10 @@ package com.gdlib.util
 
 			return r;
 		}
-		
+
 		/**
 		 * 获得一个范围内的无符号整数(包括最大值)
-		 *
+		 * ex:  unsignedInteger(-1024, 1024) = 398 or -549 or -1024 or 1024.
 		 * @param min	最小值
 		 * @param max	最大值
 		 * @param duplicate	是否可重复
@@ -72,31 +72,31 @@ package com.gdlib.util
 		 */
 		public static function unsignedInteger(min:int, max:int, duplicate:Boolean=true):int
 		{
-			if(min > max)
+			if (min > max)
 				throw new Error("In function unsignedInteger, parameter max must bigger than min.");
-			
+
 			var r:int;
-			if(min <= 0 && max <= 0)
+			if (min <= 0 && max <= 0)
 			{
-				r = -integer(-max, -min);
+				r=-integer(-max, -min);
 			}
-			else if(min <= 0 && max >= 0)
+			else if (min <= 0 && max >= 0)
 			{
-				var rate:Number = -min/(max-min);
-				if(Math.random() > rate)
+				var rate:Number=-min / (max - min);
+				if (Math.random() > rate)
 				{
-					r = integer(0, max+1);
+					r=integer(0, max + 1);
 				}
 				else
 				{
-					r = -integer(0, -min+1);
+					r=-integer(0, -min + 1);
 				}
 			}
 			else
 			{
-				r = integer(min, max+1);
+				r=integer(min, max + 1);
 			}
-			
+
 			return r;
 		}
 
@@ -124,6 +124,7 @@ package com.gdlib.util
 			var result:String="";
 			for (var i:int=0; i < len; i++)
 			{
+				// 28个小写英文字母和28个大写英文字母
 				result+=String.fromCharCode(integer(65, 122));
 			}
 			return result;

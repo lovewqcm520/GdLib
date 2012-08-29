@@ -4,15 +4,15 @@ package com.gdlib.test
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
 	import flash.events.Event;
-	
+
 	[SWF(width="800", height="600")]
 	public class BaseTest extends Sprite
 	{
 		public function BaseTest()
 		{
 			super();
-			
-			if(stage)
+
+			if (stage)
 			{
 				init();
 			}
@@ -21,18 +21,18 @@ package com.gdlib.test
 				addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 			}
 		}
-		
+
 		protected function onAddedToStage(event:Event):void
 		{
 			removeEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
-			
+
 			init();
 		}
-		
+
 		protected function init():void
 		{
-			stage.align = StageAlign.TOP_LEFT;
-			stage.scaleMode = StageScaleMode.NO_SCALE;
+			stage.align=StageAlign.TOP_LEFT;
+			stage.scaleMode=StageScaleMode.NO_SCALE;
 		}
 	}
 }
